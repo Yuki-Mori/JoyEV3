@@ -1,7 +1,9 @@
 mkfile_path := $(dir $(lastword $(MAKEFILE_LIST)))
 
 LIB_CXXOBJS += MyString.o
-BL_CXXOBJS += Bluetooth.o
+BL_CXXOBJS += \
+	Bluetooth.o \
+	BTConnection.o \
 
 APPL_COBJS += 
 
