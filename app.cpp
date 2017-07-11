@@ -22,6 +22,11 @@ void judgement_task(intptr_t unused){
 void operation_task(intptr_t unused){
 }
 
+void bluetooth_task(intptr_t unued){
+}
+
 void main_cyc(intptr_t unused){
-	
+}
+
+void bluetooth_cyc(intptr_t unused){
 }

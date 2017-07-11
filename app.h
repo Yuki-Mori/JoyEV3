@@ -16,7 +16,9 @@ extern void init_task(intptr_t exinf);
 extern void cognition_task(intptr_t exinf);
 extern void judgement_task(intptr_t exinf);
 extern void operation_task(intptr_t exinf);
+extern void bluetooth_task(intptr_t exinf);
 extern void main_cyc(intptr_t exinf);
+extern void bluetooth_cyc(intptr_t exinf);
 
 
 #endif /* TOPPERS_MACRO_ONLY */

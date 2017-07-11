@@ -1,10 +1,11 @@
 mkfile_path := $(dir $(lastword $(MAKEFILE_LIST)))
 
 LIB_CXXOBJS += MyString.o
+BL_CXXOBJS += Bluetooth.o
 
 APPL_COBJS += 
 
-APPL_CXXOBJS += $(LIB_CXXOBJS)
+APPL_CXXOBJS += $(LIB_CXXOBJS) $(BL_CXXOBJS)
 
 SRCLANG := c++
 
@@ -23,6 +24,7 @@ APPL_DIR += \
 		$(mkfile_path)Judgement \
 		$(mkfile_path)Operation \
 		$(mkfile_path)Library \
+		$(mkfile_path)Bluetooth \
 
 # -I$./hoge
 INCLUDES += \
@@ -30,5 +32,6 @@ INCLUDES += \
 		-I$(mkfile_path)Judgement \
 		-I$(mkfile_path)Operation \
 		-I$(mkfile_path)Library \
+		-I$(mkfile_path)Bluetooth \
 		
 COPTS += -fno-use-cxa-atexit
