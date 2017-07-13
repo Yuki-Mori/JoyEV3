@@ -46,7 +46,7 @@ bool BTConnection::write(char* str) {
     return (result < 0) ? false : true;
 }
 
-int read(void) {
+int BTConnection::read(void) {
     if(!this->isConnected()) {
         return -1;
     }
