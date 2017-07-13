@@ -14,7 +14,7 @@ namespace BT {
 		BTConnection(BTConnection& orig);
 		~BTConnection(void);
 		bool isConnected(void);
-		bool write(char* str);
+		bool write(const char* str);
 		int read(void);
 		static BTConnection connect(void);
 	private:

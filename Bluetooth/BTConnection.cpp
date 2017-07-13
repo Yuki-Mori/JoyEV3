@@ -38,7 +38,7 @@ bool BTConnection::isConnected(void) {
     return ev3_bluetooth_is_connected();
 }
 
-bool BTConnection::write(char* str) {
+bool BTConnection::write(const char* str) {
     if(!this->isConnected()) {
         return false;
     }
