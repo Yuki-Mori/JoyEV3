@@ -30,3 +30,25 @@ BTConnection BTConnection::connect(){
     cn.bt = sbt;
     return cn;
 }
+
+bool BTConnection::isConnected(void) {
+    if(this->bt == NULL) {
+        return false;
+    }
+    return ev3_bluetooth_is_connected();
+}
+
+bool BTConnection::write(char* str) {
+    if(!this->isConnected()) {
+        return false;
+    }
+    int result = fprintf(this->bt, "%s\r", str);
+    return (result < 0) ? false : true;
+}
+
+int read(void) {
+    if(!this->isConnected()) {
+        return -1;
+    }
+    return fgetc(this->bt);
+}

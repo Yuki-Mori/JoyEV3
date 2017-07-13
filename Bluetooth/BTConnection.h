@@ -13,6 +13,9 @@ namespace BT {
 		BTConnection(void);
 		BTConnection(BTConnection& orig);
 		~BTConnection(void);
+		bool isConnected(void);
+		bool write(char* str);
+		int read(void);
 		static BTConnection connect(void);
 	private:
 		static FILE* sbt;
