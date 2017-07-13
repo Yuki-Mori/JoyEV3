@@ -5,9 +5,21 @@ BL_CXXOBJS += \
 	Bluetooth.o \
 	BTConnection.o \
 
+CN_CXXOBJS += \
+
+JM_CXXOBJS += \
+	Main.o\
+
+OP_CXXOBJS += \
+
 APPL_COBJS += 
 
-APPL_CXXOBJS += $(LIB_CXXOBJS) $(BL_CXXOBJS)
+APPL_CXXOBJS += \
+	$(LIB_CXXOBJS) \
+	$(BL_CXXOBJS) \
+	$(CN_CXXOBJS) \
+	$(JM_CXXOBJS) \
+	$(OP_CXXOBJS)
 
 SRCLANG := c++
 
